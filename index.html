@@ -12,14 +12,6 @@
 
 <style>
 
-:root{
---bg:#0f172a;
---card:#1e293b;
---text:#ffffff;
---muted:#94a3b8;
---accent:#38bdf8;
-}
-
 *{
 margin:0;
 padding:0;
@@ -29,8 +21,9 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Inter',sans-serif;
-background:var(--bg);
-color:var(--text);
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
 .container{
@@ -42,16 +35,18 @@ margin:auto;
 nav{
 position:sticky;
 top:0;
-background:#0f172ae8;
-padding:18px 0;
+background:#0f172ae6;
+backdrop-filter:blur(10px);
 z-index:999;
-backdrop-filter:blur(8px);
+padding:18px 0;
 }
 
 .nav-flex{
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .logo{
@@ -62,20 +57,24 @@ font-weight:700;
 
 nav ul{
 display:flex;
-gap:18px;
+gap:16px;
 list-style:none;
 flex-wrap:wrap;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:white;
 font-size:14px;
 }
 
+section{
+padding:70px 0;
+}
+
 .hero{
-padding:90px 0;
 text-align:center;
+padding:100px 0 70px;
 }
 
 .hero h1{
@@ -84,26 +83,23 @@ font-family:'Poppins',sans-serif;
 }
 
 .hero h2{
-margin-top:12px;
 font-size:24px;
-color:var(--accent);
+color:#38bdf8;
+margin-top:10px;
 }
 
 .hero p{
-margin-top:18px;
-max-width:800px;
-margin-left:auto;
-margin-right:auto;
-color:var(--muted);
-line-height:1.7;
+max-width:850px;
+margin:20px auto;
+color:#cbd5e1;
 }
 
 .btns{
-margin-top:28px;
 display:flex;
 justify-content:center;
-gap:14px;
+gap:15px;
 flex-wrap:wrap;
+margin-top:25px;
 }
 
 .btn{
@@ -114,34 +110,30 @@ font-weight:600;
 }
 
 .primary{
-background:var(--accent);
+background:#38bdf8;
 color:#000;
 }
 
 .secondary{
-border:1px solid var(--accent);
+border:1px solid #38bdf8;
 color:white;
-}
-
-section{
-padding:65px 0;
 }
 
 .title{
 text-align:center;
 font-size:34px;
 font-family:'Poppins',sans-serif;
-margin-bottom:28px;
+margin-bottom:35px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:22px;
 }
 
 .card{
-background:var(--card);
+background:#1e293b;
 padding:24px;
 border-radius:18px;
 transition:.3s;
@@ -151,37 +143,53 @@ transition:.3s;
 transform:translateY(-8px);
 }
 
+.card h3{
+margin-bottom:12px;
+color:#38bdf8;
+}
+
 .skills span,.cert span{
 display:inline-block;
-padding:8px 14px;
+background:#0f172a;
+padding:10px 14px;
 margin:6px;
-background:#172338;
 border-radius:25px;
 font-size:14px;
 }
 
 .timeline{
-border-left:3px solid var(--accent);
-padding-left:25px;
+border-left:3px solid #38bdf8;
+padding-left:22px;
 display:grid;
-gap:22px;
-}
-
-footer{
-padding:30px;
-text-align:center;
-color:var(--muted);
+gap:24px;
 }
 
 .small{
-color:var(--muted);
 font-size:14px;
+color:#94a3b8;
 margin-top:8px;
 }
 
+footer{
+padding:35px;
+text-align:center;
+color:#94a3b8;
+}
+
+a{
+color:#38bdf8;
+}
+
 @media(max-width:768px){
-.hero h1{font-size:38px;}
-nav ul{display:none;}
+
+.hero h1{
+font-size:38px;
+}
+
+nav ul{
+display:none;
+}
+
 }
 
 </style>
@@ -196,105 +204,39 @@ nav ul{display:none;}
 
 <ul>
 <li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
 <li><a href="#internships">Internships</a></li>
 <li><a href="#education">Education</a></li>
-<li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#research">Research</a></li>
 <li><a href="#certificates">Certificates</a></li>
 <li><a href="#awards">Awards</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 
 </div>
 </nav>
 
-<section class="hero">
+<section class="hero" id="about">
 <div class="container">
 
 <h1>A S Sai Thejaswini</h1>
-<h2>AI / ML Engineer • Generative AI • Data Analyst</h2>
+<h2>AI / ML Engineer • Data Analyst • Generative AI</h2>
 
 <p>
-MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytics, Healthcare AI, Deep Learning and Cloud Systems.
+Seeking AI/ML Engineer or Data Analytics roles with exposure to cloud-based ML solutions.
+Pursuing PG specialization in ML, DL, Data Driven Decision Systems, Python, AWS Cloud and BI Tools.
+Research presenter and Best Paper Award recipient.
 </p>
 
 <div class="btns">
+
 <a href="resume.pdf" class="btn primary">Download Resume</a>
-<a href="https://www.linkedin.com/" class="btn secondary">LinkedIn</a>
-<a href="https://github.com/ASSAITHEJASWINI14" class="btn secondary">GitHub</a>
-<a href="https://www.kaggle.com/saithejaswini5" class="btn secondary">Kaggle</a>
-</div>
 
-</div>
-</section>
+<a href="https://www.linkedin.com/in/a-s-sai-thejaswini-2b57762b0/" class="btn secondary" target="_blank">LinkedIn</a>
 
-<section id="about">
-<div class="container">
+<a href="https://github.com/ASSAITHEJASWINI14" class="btn secondary" target="_blank">GitHub</a>
 
-<h2 class="title">About & Contact</h2>
-
-<div class="card">
-<p>Email: assaithejaswini@gmail.com</p>
-<p>Phone: +91 XXXXX XXXXX</p>
-<p>Location: Chennai, Tamil Nadu</p>
-<p>LinkedIn / GitHub / Kaggle links above</p>
-</div>
-
-</div>
-</section>
-
-<section id="internships">
-<div class="container">
-
-<h2 class="title">Internships</h2>
-
-<div class="timeline">
-
-<div>
-<h3>Prodigy InfoTech</h3>
-<p>Data Science Intern – EDA, Analytics, Machine Learning Models</p>
-</div>
-
-<div>
-<h3>Qwings IITM RP</h3>
-<p>Machine Learning Intern – Freight Audit Tool Integration</p>
-</div>
-
-<div>
-<h3>SRET</h3>
-<p>Web Development Intern – Angular, PHP, MySQL</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="education">
-<div class="container">
-
-<h2 class="title">Education</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>MCA – Generative AI</h3>
-<p>SRM Institute of Science and Technology</p>
-<p>2025 – 2027</p>
-<p>CGPA: 10.00</p>
-</div>
-
-<div class="card">
-<h3>B.Sc Computer Science (AI/ML)</h3>
-<p>SRIHER</p>
-<p>2022 – 2025</p>
-<p>CGPA: 9.20</p>
-</div>
-
-<div class="card">
-<h3>The Hindu Senior Secondary School</h3>
-<p>12th: 86%</p>
-<p>10th: 80.5%</p>
-</div>
+<a href="https://www.kaggle.com/saithejaswini5" class="btn secondary" target="_blank">Kaggle</a>
 
 </div>
 
@@ -307,13 +249,115 @@ MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytic
 <h2 class="title">Skills</h2>
 
 <div class="card skills">
-<span>Python</span><span>Java</span><span>SQL</span><span>R</span>
-<span>Machine Learning</span><span>Deep Learning</span>
-<span>NLP</span><span>Generative AI</span>
-<span>Prompt Engineering</span><span>Power BI</span>
-<span>AWS</span><span>MongoDB</span>
-<span>MySQL</span><span>Computer Vision</span>
-<span>Healthcare AI</span><span>IoT</span>
+
+<span>Python</span>
+<span>Java</span>
+<span>R</span>
+<span>Machine Learning</span>
+<span>Deep Learning</span>
+<span>Neural Networks</span>
+<span>Classification</span>
+<span>Regression</span>
+<span>Clustering</span>
+<span>Feature Engineering</span>
+<span>LLM</span>
+<span>RAG</span>
+<span>Agents</span>
+<span>Prompt Engineering</span>
+<span>EDA</span>
+<span>Power BI</span>
+<span>Tableau</span>
+<span>Google Analytics</span>
+<span>AWS EC2</span>
+<span>AWS S3</span>
+<span>AWS RDS</span>
+<span>AWS SNS</span>
+<span>MySQL</span>
+<span>PL/SQL</span>
+<span>MongoDB</span>
+<span>TensorFlow</span>
+<span>Scikit-learn</span>
+
+</div>
+
+</div>
+</section>
+
+<section id="internships">
+<div class="container">
+
+<h2 class="title">Internship Experience</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>Ulavi Technologies</h3>
+<p>Vibe Coding, Product Management & Analysis Intern</p>
+<p>May 11 2026 – June 10 2026</p>
+<p>Worked on GenAI tools, vibe coding workflows, product analytics, comparative analysis of multiple analytical systems and practical business solution testing.</p>
+</div>
+
+<div class="card">
+<h3>Prodigy InfoTech</h3>
+<p>Data Science Intern</p>
+<p>Sept 2025 – Oct 2025</p>
+<p>Performed Statistical Analytics, ML workflows, Apriori Analysis, Data Mining and Visualization.</p>
+</div>
+
+<div class="card">
+<h3>Qwings IITM RP</h3>
+<p>Machine Learning Intern</p>
+<p>May 2024 – July 2024</p>
+<p>Designed and integrated ML layer into Freight Audit Tool using real-time invoice datasets, feature engineering and preprocessing.</p>
+</div>
+
+<div class="card">
+<h3>SRET</h3>
+<p>Web Development Intern</p>
+<p>May 2023 – July 2023</p>
+<p>Built e-commerce platform using Angular, PHP, MySQL and REST backend integration.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+
+<h2 class="title">Education</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>MCA Generative AI</h3>
+<p>SRM Institute of Science and Technology</p>
+<p>2025 – 2027</p>
+<p>Current CGPA: <strong>10.00</strong></p>
+</div>
+
+<div class="card">
+<h3>B.Sc Computer Science (AI/ML)</h3>
+<p>Sri Ramachandra Faculty of Engineering and Technology</p>
+<p>2022 – 2025</p>
+<p>CGPA: <strong>9.20</strong></p>
+</div>
+
+<div class="card">
+<h3>AISSCE</h3>
+<p>The Hindu Senior Secondary School</p>
+<p>2022</p>
+<p>86%</p>
+</div>
+
+<div class="card">
+<h3>AISCE</h3>
+<p>The Hindu Senior Secondary School</p>
+<p>2020</p>
+<p>80.5%</p>
+</div>
+
 </div>
 
 </div>
@@ -322,63 +366,43 @@ MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytic
 <section id="projects">
 <div class="container">
 
-<h2 class="title">Projects</h2>
+<h2 class="title">Projects & Research Works</h2>
 
 <div class="grid">
 
-<a href="speech-therapy.html" style="text-decoration:none;color:white;">
 <div class="card">
-<h3>AI Speech Therapy App</h3>
-<p>Speech analysis using NLP + ML with therapy recommendations.</p>
+<h3>AI Speech Therapy Web Application</h3>
+<p>Uses NLP and Machine Learning to assess pronunciation, fluency and language patterns. Generates personalized therapy exercises and tracks progress for speech challenges including autism support.</p>
 </div>
-</a>
 
-<a href="llm-analysis.html" style="text-decoration:none;color:white;">
 <div class="card">
-<h3>LLM Data Analysis Tool</h3>
-<p>Prompt to EDA workflow automation system.</p>
+<h3>LLM Driven Data Analysis System</h3>
+<p>Converts user prompts into Python based EDA workflows. Automates statistical analysis, visualization generation and report creation for datasets.</p>
 </div>
-</a>
 
-<a href="liver-segmentation.html" style="text-decoration:none;color:white;">
 <div class="card">
-<h3>Liver Tumor Segmentation</h3>
-<p>Medical image segmentation with 94% accuracy.</p>
+<h3>Liver Tumour & Cirrhosis Segmentation</h3>
+<p>Deep Learning image segmentation model trained on PubMed medical imaging datasets with <strong>94% accuracy</strong>.</p>
 </div>
-</a>
 
-<a href="iot-tracking.html" style="text-decoration:none;color:white;">
 <div class="card">
-<h3>IoT Tracking System</h3>
-<p>Real-time smart tracking with Python backend.</p>
+<h3>IoT Location Tracking System</h3>
+<p>Built with IoT devices, Embedded Systems, Python and Flask APIs for smart live tracking solutions.</p>
 </div>
-</a>
-
-</div>
-
-</div>
-</section>
-
-<section id="research">
-<div class="container">
-
-<h2 class="title">Research Works & Publications</h2>
-
-<div class="grid">
 
 <div class="card">
 <h3>AI in Automating Accounting</h3>
-<p>NGISCT24 SRM Conference</p>
+<p>Presented at NGISCT24 SRM Conference.</p>
 </div>
 
 <div class="card">
 <h3>Time Series Crime Prediction</h3>
-<p>LSTM and GRU Models – SRIHER</p>
+<p>Used LSTM and GRU models – SRIHER.</p>
 </div>
 
 <div class="card">
 <h3>AI Powered Resource Prioritization</h3>
-<p>DIGISF’26</p>
+<p>Published at DIGISF’26.</p>
 </div>
 
 </div>
@@ -396,14 +420,14 @@ MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytic
 <span>AWS Cloud Foundations ⭐</span>
 <span>AWS Practitioner Essentials ⭐</span>
 <span>Cisco Cyber Security ⭐</span>
-<span>Google Analytics</span>
-<span>Power BI ⭐</span>
+<span>Google Analytics ⭐</span>
+<span>Microsoft Power BI ⭐</span>
 <span>MongoDB</span>
 <span>Full Stack Web Development</span>
 <span>NumPy & Pandas ⭐</span>
 
 <p class="small">
-⭐ Recommended to highlight first for AI/ML & Data jobs
+⭐ Recommended to highlight for AI / Data Analytics job applications
 </p>
 
 </div>
@@ -419,13 +443,13 @@ MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytic
 <div class="grid">
 
 <div class="card">
-<h3>Best Paper Award</h3>
-<p>DIGISF’26 SRMIST</p>
+<h3>Cash Award</h3>
+<p>Highest Marks – SRIHER</p>
 </div>
 
 <div class="card">
-<h3>Cash Award</h3>
-<p>Highest Marks – SRIHER</p>
+<h3>Best Paper Award</h3>
+<p>Enhancing Intrusion Detection System using Generative Models and Blockchain Technology – DIGISF’26 SRMIST</p>
 </div>
 
 </div>
@@ -433,8 +457,26 @@ MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytic
 </div>
 </section>
 
+<section id="contact">
+<div class="container">
+
+<h2 class="title">Contact Summary</h2>
+
+<div class="card">
+
+<p><strong>Mobile:</strong> 9952993592</p>
+<p><strong>Email:</strong> assaithejaswini@gmail.com</p>
+<p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/a-s-sai-thejaswini-2b57762b0/" target="_blank">View Profile</a></p>
+<p><strong>GitHub:</strong> <a href="https://github.com/ASSAITHEJASWINI14" target="_blank">Open GitHub</a></p>
+<p><strong>Kaggle:</strong> <a href="https://www.kaggle.com/saithejaswini5" target="_blank">Open Kaggle</a></p>
+
+</div>
+
+</div>
+</section>
+
 <footer>
-© 2026 A S Sai Thejaswini | Interactive AI Portfolio
+© 2026 A S Sai Thejaswini | GitHub Portfolio
 </footer>
 
 </body>
