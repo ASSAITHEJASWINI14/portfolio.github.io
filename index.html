@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A S Sai Thejaswini | Interactive Portfolio</title>
+<title>A S Sai Thejaswini | AI Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +20,6 @@
 --accent:#38bdf8;
 }
 
-.light{
---bg:#f8fafc;
---card:#ffffff;
---text:#0f172a;
---muted:#475569;
---accent:#0284c7;
-}
-
 *{
 margin:0;
 padding:0;
@@ -39,16 +31,6 @@ body{
 font-family:'Inter',sans-serif;
 background:var(--bg);
 color:var(--text);
-transition:0.4s;
-overflow-x:hidden;
-}
-
-canvas{
-position:fixed;
-top:0;
-left:0;
-z-index:-1;
-opacity:.25;
 }
 
 .container{
@@ -60,10 +42,10 @@ margin:auto;
 nav{
 position:sticky;
 top:0;
-background:rgba(15,23,42,.9);
-backdrop-filter:blur(10px);
-z-index:999;
+background:#0f172ae8;
 padding:18px 0;
+z-index:999;
+backdrop-filter:blur(8px);
 }
 
 .nav-flex{
@@ -74,33 +56,25 @@ align-items:center;
 
 .logo{
 font-size:24px;
-font-weight:700;
 font-family:'Poppins',sans-serif;
+font-weight:700;
 }
 
 nav ul{
 display:flex;
-gap:20px;
+gap:18px;
 list-style:none;
+flex-wrap:wrap;
 }
 
 nav a{
+color:white;
 text-decoration:none;
-color:var(--text);
-font-size:15px;
-}
-
-.toggle{
-padding:8px 14px;
-border:none;
-background:var(--accent);
-border-radius:10px;
-cursor:pointer;
-font-weight:600;
+font-size:14px;
 }
 
 .hero{
-padding:100px 0;
+padding:90px 0;
 text-align:center;
 }
 
@@ -110,26 +84,25 @@ font-family:'Poppins',sans-serif;
 }
 
 .hero h2{
-margin-top:10px;
-font-size:26px;
+margin-top:12px;
+font-size:24px;
 color:var(--accent);
 }
 
 .hero p{
-margin-top:20px;
-font-size:18px;
-color:var(--muted);
+margin-top:18px;
 max-width:800px;
 margin-left:auto;
 margin-right:auto;
-line-height:1.8;
+color:var(--muted);
+line-height:1.7;
 }
 
 .btns{
-margin-top:30px;
+margin-top:28px;
 display:flex;
 justify-content:center;
-gap:15px;
+gap:14px;
 flex-wrap:wrap;
 }
 
@@ -138,7 +111,6 @@ padding:14px 22px;
 border-radius:12px;
 text-decoration:none;
 font-weight:600;
-transition:.3s;
 }
 
 .primary{
@@ -148,22 +120,18 @@ color:#000;
 
 .secondary{
 border:1px solid var(--accent);
-color:var(--text);
-}
-
-.btn:hover{
-transform:translateY(-5px);
+color:white;
 }
 
 section{
-padding:70px 0;
+padding:65px 0;
 }
 
 .title{
 text-align:center;
-font-size:36px;
+font-size:34px;
 font-family:'Poppins',sans-serif;
-margin-bottom:30px;
+margin-bottom:28px;
 }
 
 .grid{
@@ -174,20 +142,16 @@ gap:20px;
 
 .card{
 background:var(--card);
-padding:25px;
+padding:24px;
 border-radius:18px;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
-.card h3{
-margin-bottom:10px;
-}
-
-.skills span{
+.skills span,.cert span{
 display:inline-block;
 padding:8px 14px;
 margin:6px;
@@ -200,49 +164,23 @@ font-size:14px;
 border-left:3px solid var(--accent);
 padding-left:25px;
 display:grid;
-gap:25px;
-}
-
-.timeline-item h3{
-margin-bottom:8px;
-}
-
-.icons{
-display:flex;
-justify-content:center;
-gap:25px;
-font-size:20px;
-flex-wrap:wrap;
-}
-
-.icons a{
-color:var(--text);
-text-decoration:none;
-padding:12px 18px;
-background:var(--card);
-border-radius:12px;
-transition:.3s;
-}
-
-.icons a:hover{
-transform:translateY(-5px);
-}
-
-.resume-frame{
-width:100%;
-height:600px;
-border:none;
-border-radius:18px;
+gap:22px;
 }
 
 footer{
-padding:35px;
+padding:30px;
 text-align:center;
 color:var(--muted);
 }
 
+.small{
+color:var(--muted);
+font-size:14px;
+margin-top:8px;
+}
+
 @media(max-width:768px){
-.hero h1{font-size:40px;}
+.hero h1{font-size:38px;}
 nav ul{display:none;}
 }
 
@@ -251,22 +189,21 @@ nav ul{display:none;}
 
 <body>
 
-<canvas id="bg"></canvas>
-
 <nav>
 <div class="container nav-flex">
+
 <div class="logo">Sai Thejaswini</div>
 
 <ul>
 <li><a href="#about">About</a></li>
+<li><a href="#internships">Internships</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#internships">Internships</a></li>
-<li><a href="#resume">Resume</a></li>
-<li><a href="#links">Links</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#awards">Awards</a></li>
 </ul>
-
-<button class="toggle" onclick="theme()">Theme</button>
 
 </div>
 </nav>
@@ -275,15 +212,17 @@ nav ul{display:none;}
 <div class="container">
 
 <h1>A S Sai Thejaswini</h1>
-<h2 id="changing"></h2>
+<h2>AI / ML Engineer • Generative AI • Data Analyst</h2>
 
 <p>
-AI Engineer focused on Machine Learning, Generative AI, NLP, Healthcare AI, Data Analytics and Cloud Systems.
+MCA Generative AI student with expertise in Machine Learning, NLP, Data Analytics, Healthcare AI, Deep Learning and Cloud Systems.
 </p>
 
 <div class="btns">
-<a href="#projects" class="btn primary">View Projects</a>
-<a href="resume.pdf" class="btn secondary">Download Resume</a>
+<a href="resume.pdf" class="btn primary">Download Resume</a>
+<a href="https://www.linkedin.com/" class="btn secondary">LinkedIn</a>
+<a href="https://github.com/ASSAITHEJASWINI14" class="btn secondary">GitHub</a>
+<a href="https://www.kaggle.com/saithejaswini5" class="btn secondary">Kaggle</a>
 </div>
 
 </div>
@@ -291,10 +230,72 @@ AI Engineer focused on Machine Learning, Generative AI, NLP, Healthcare AI, Data
 
 <section id="about">
 <div class="container">
-<h2 class="title">About Me</h2>
+
+<h2 class="title">About & Contact</h2>
 
 <div class="card">
-MCA Generative AI student with strong foundations in AI, ML, NLP, Data Science and Cloud Technologies. Passionate about solving real-world problems using intelligent systems.
+<p>Email: assaithejaswini@gmail.com</p>
+<p>Phone: +91 XXXXX XXXXX</p>
+<p>Location: Chennai, Tamil Nadu</p>
+<p>LinkedIn / GitHub / Kaggle links above</p>
+</div>
+
+</div>
+</section>
+
+<section id="internships">
+<div class="container">
+
+<h2 class="title">Internships</h2>
+
+<div class="timeline">
+
+<div>
+<h3>Prodigy InfoTech</h3>
+<p>Data Science Intern – EDA, Analytics, Machine Learning Models</p>
+</div>
+
+<div>
+<h3>Qwings IITM RP</h3>
+<p>Machine Learning Intern – Freight Audit Tool Integration</p>
+</div>
+
+<div>
+<h3>SRET</h3>
+<p>Web Development Intern – Angular, PHP, MySQL</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="container">
+
+<h2 class="title">Education</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>MCA – Generative AI</h3>
+<p>SRM Institute of Science and Technology</p>
+<p>2025 – 2027</p>
+<p>CGPA: 10.00</p>
+</div>
+
+<div class="card">
+<h3>B.Sc Computer Science (AI/ML)</h3>
+<p>SRIHER</p>
+<p>2022 – 2025</p>
+<p>CGPA: 9.20</p>
+</div>
+
+<div class="card">
+<h3>The Hindu Senior Secondary School</h3>
+<p>12th: 86%</p>
+<p>10th: 80.5%</p>
+</div>
+
 </div>
 
 </div>
@@ -303,25 +304,16 @@ MCA Generative AI student with strong foundations in AI, ML, NLP, Data Science a
 <section id="skills">
 <div class="container">
 
-<h2 class="title">Domains & Skills</h2>
+<h2 class="title">Skills</h2>
 
 <div class="card skills">
-
-<span>Python</span>
-<span>Java</span>
-<span>SQL</span>
-<span>Machine Learning</span>
-<span>Deep Learning</span>
-<span>NLP</span>
-<span>Generative AI</span>
-<span>Prompt Engineering</span>
-<span>Computer Vision</span>
-<span>Healthcare AI</span>
-<span>Power BI</span>
-<span>AWS</span>
-<span>MongoDB</span>
-<span>IoT</span>
-
+<span>Python</span><span>Java</span><span>SQL</span><span>R</span>
+<span>Machine Learning</span><span>Deep Learning</span>
+<span>NLP</span><span>Generative AI</span>
+<span>Prompt Engineering</span><span>Power BI</span>
+<span>AWS</span><span>MongoDB</span>
+<span>MySQL</span><span>Computer Vision</span>
+<span>Healthcare AI</span><span>IoT</span>
 </div>
 
 </div>
@@ -334,58 +326,59 @@ MCA Generative AI student with strong foundations in AI, ML, NLP, Data Science a
 
 <div class="grid">
 
+<a href="speech-therapy.html" style="text-decoration:none;color:white;">
 <div class="card">
 <h3>AI Speech Therapy App</h3>
-<p>Speech correction system using NLP + ML.</p>
-<br>
-<a href="#">GitHub Link</a>
+<p>Speech analysis using NLP + ML with therapy recommendations.</p>
 </div>
+</a>
 
+<a href="llm-analysis.html" style="text-decoration:none;color:white;">
 <div class="card">
 <h3>LLM Data Analysis Tool</h3>
-<p>Prompt to EDA automation platform.</p>
-<br>
-<a href="#">GitHub Link</a>
+<p>Prompt to EDA workflow automation system.</p>
 </div>
+</a>
 
+<a href="liver-segmentation.html" style="text-decoration:none;color:white;">
 <div class="card">
 <h3>Liver Tumor Segmentation</h3>
-<p>Medical image segmentation with Deep Learning.</p>
-<br>
-<a href="#">GitHub Link</a>
+<p>Medical image segmentation with 94% accuracy.</p>
+</div>
+</a>
+
+<a href="iot-tracking.html" style="text-decoration:none;color:white;">
+<div class="card">
+<h3>IoT Tracking System</h3>
+<p>Real-time smart tracking with Python backend.</p>
+</div>
+</a>
+
+</div>
+
+</div>
+</section>
+
+<section id="research">
+<div class="container">
+
+<h2 class="title">Research Works & Publications</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI in Automating Accounting</h3>
+<p>NGISCT24 SRM Conference</p>
 </div>
 
 <div class="card">
-<h3>IoT Tracking System</h3>
-<p>Live location system with Python backend.</p>
-<br>
-<a href="#">GitHub Link</a>
+<h3>Time Series Crime Prediction</h3>
+<p>LSTM and GRU Models – SRIHER</p>
 </div>
 
-</div>
-</div>
-</section>
-
-<section id="internships">
-<div class="container">
-
-<h2 class="title">Internships</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Prodigy Infotech</h3>
-<p>Data Science Intern - EDA, ML Models, Analytics.</p>
-</div>
-
-<div class="timeline-item">
-<h3>Qwings IITM RP</h3>
-<p>Machine Learning Intern - Freight Audit AI System.</p>
-</div>
-
-<div class="timeline-item">
-<h3>SRET</h3>
-<p>Web Development Intern - Angular + PHP + MySQL.</p>
+<div class="card">
+<h3>AI Powered Resource Prioritization</h3>
+<p>DIGISF’26</p>
 </div>
 
 </div>
@@ -393,30 +386,47 @@ MCA Generative AI student with strong foundations in AI, ML, NLP, Data Science a
 </div>
 </section>
 
-<section id="resume">
+<section id="certificates">
 <div class="container">
 
-<h2 class="title">Resume</h2>
+<h2 class="title">Certificates</h2>
 
-<iframe src="resume.pdf" class="resume-frame"></iframe>
+<div class="card cert">
+
+<span>AWS Cloud Foundations ⭐</span>
+<span>AWS Practitioner Essentials ⭐</span>
+<span>Cisco Cyber Security ⭐</span>
+<span>Google Analytics</span>
+<span>Power BI ⭐</span>
+<span>MongoDB</span>
+<span>Full Stack Web Development</span>
+<span>NumPy & Pandas ⭐</span>
+
+<p class="small">
+⭐ Recommended to highlight first for AI/ML & Data jobs
+</p>
+
+</div>
 
 </div>
 </section>
 
-<section id="links">
+<section id="awards">
 <div class="container">
 
-<h2 class="title">Connect With Me</h2>
+<h2 class="title">Honors & Awards</h2>
 
-<div class="icons">
+<div class="grid">
 
-<a href="https://github.com/ASSAITHEJASWINI14" target="_blank">GitHub</a>
+<div class="card">
+<h3>Best Paper Award</h3>
+<p>DIGISF’26 SRMIST</p>
+</div>
 
-<a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-
-<a href="https://www.kaggle.com/" target="_blank">Kaggle</a>
-
-<a href="mailto:assaithejaswini@gmail.com">Email</a>
+<div class="card">
+<h3>Cash Award</h3>
+<p>Highest Marks – SRIHER</p>
+</div>
 
 </div>
 
@@ -424,70 +434,8 @@ MCA Generative AI student with strong foundations in AI, ML, NLP, Data Science a
 </section>
 
 <footer>
-© 2026 A S Sai Thejaswini | Interactive Portfolio
+© 2026 A S Sai Thejaswini | Interactive AI Portfolio
 </footer>
-
-<script>
-
-function theme(){
-document.body.classList.toggle("light");
-}
-
-let roles=[
-"AI / ML Engineer",
-"Generative AI Developer",
-"Data Analyst",
-"NLP Engineer",
-"Healthcare AI Researcher"
-];
-
-let r=0;
-
-setInterval(()=>{
-document.getElementById("changing").innerHTML=roles[r];
-r=(r+1)%roles.length;
-},2000);
-
-const canvas=document.getElementById("bg");
-const ctx=canvas.getContext("2d");
-
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
-
-let dots=[];
-
-for(let i=0;i<80;i++){
-dots.push({
-x:Math.random()*canvas.width,
-y:Math.random()*canvas.height,
-dx:(Math.random()-.5),
-dy:(Math.random()-.5),
-r:2
-});
-}
-
-function animate(){
-ctx.clearRect(0,0,canvas.width,canvas.height);
-
-dots.forEach(d=>{
-ctx.beginPath();
-ctx.arc(d.x,d.y,d.r,0,6.28);
-ctx.fillStyle="white";
-ctx.fill();
-
-d.x+=d.dx;
-d.y+=d.dy;
-
-if(d.x<0||d.x>canvas.width)d.dx*=-1;
-if(d.y<0||d.y>canvas.height)d.dy*=-1;
-});
-
-requestAnimationFrame(animate);
-}
-
-animate();
-
-</script>
 
 </body>
 </html>
